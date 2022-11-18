@@ -47,7 +47,7 @@ function mutationWithFiles(
       throw new Error('Uploading files without `FormData` not supported.');
     }
     const formData = new FormData();
-    formData.append('id', req.relayReqId);
+
     formData.append('query', relayRequest.getQueryString());
     formData.append('variables', JSON.stringify(relayRequest.getVariables()));
 
@@ -78,7 +78,7 @@ function mutationWithoutFiles(
   };
 
   req.body = JSON.stringify({
-    id: req.relayReqId,
+  
     query: relayRequest.getQueryString(),
     variables: relayRequest.getVariables(),
   });

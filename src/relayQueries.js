@@ -23,7 +23,7 @@ export default function queries(
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          id: relayRequest.getID(),
+      
           query: relayRequest.getQueryString(),
           variables: relayRequest.getVariables(),
         }),
